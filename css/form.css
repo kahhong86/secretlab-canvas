@@ -1,0 +1,32 @@
+div.controlHolder { margin-bottom: 5px; padding: 1px 0px; vertical-align: top; }
+div.controlHolder .clear { height: 5px; clear: both; }
+div.controlHolder .label { padding: 5px 10px; width: 25%; display:-moz-inline-stack; display: inline-block; zoom:1; *display:inline; vertical-align: top; }
+div.controlHolder .label em { 
+      float: right;
+      font-style:normal;
+      font-weight:bold;
+      color:#990000;
+      font-size:15px;
+      padding-right: 10px;
+}
+
+ 
+div.controlHolder .control { padding-top: 5px; width: 70%; display:-moz-inline-stack; display: inline-block; zoom:1; *display:inline;}
+div.controlHolder .control LABEL { font-weight: normal; }
+div.controlHolder .formHint { color:#777; font-size:0.9em; margin:0; }
+div.controlHolder.focused { 
+	background-color: #EBEFF9;
+	border-color:#c3d9ff;
+	border-style:solid;
+	border-width:1px 0;
+	padding: 0px 0px;
+}
+div.controlHolder.error { 
+	background:#FFDFDF none repeat scroll 0 0;
+	border-color:#DF7D7D;
+	border-style:solid;
+	border-width:1px 0;
+	padding: 0px 0px;
+}
+div.controlHolder p.error { font-weight: bold; color:#af4c4c; margin:0 0 6px 0; padding:4px; background:#ffbfbf; }
+div.buttonHolder { margin: 0px 0px 5px 25%; padding:1px 0px 0px 20px; vertical-align:top; }

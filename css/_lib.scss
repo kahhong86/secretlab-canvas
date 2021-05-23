@@ -1,0 +1,185 @@
+/*
+@font-face {
+    font-family: *font-family;
+    src: url(../fonts/**);
+}*/
+
+body{
+	font-family:helvetica,Arial;
+	font-size:14px;
+	line-height:150%;
+	margin:0;
+	color:#333;
+	font-weight:400;
+}
+
+a{text-decoration:none;
+	&:hover{text-decoration:underline;}
+}
+
+p{
+	line-height:150%;
+	margin:0 0 10px;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+
+fieldset{
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+.left{float:left;}
+.right{float:right;}
+.clr{clear:both;}
+
+h1,h2,h3,h4,h5,h6{line-height:100%;font-family:Arial;font-weight:700;}
+
+figure{margin:0;}
+
+@mixin inlineblock($valign:top){
+	display:inline-block;*display:inline;zoom:1;vertical-align:$valign;
+}
+
+@mixin gradient($top:#FBC421,$bottom:#FEA50B){
+	background: -webkit-linear-gradient(top, $top, $bottom); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, $top, $bottom); 
+	/* IE 10 */ background: -ms-linear-gradient(top, $top, $bottom);
+	-pie-background:linear-gradient($top 50%, transparent 50%, $bottom) 0 0 / 50px $bottom;
+	behavior:url(../js/PIE.htc);
+	position:relative;
+	
+}
+
+@mixin roundcorner($topleft:20px, $topright:20px, $bottomright:20px, $bottomleft:20px){
+	border-radius:$topleft $topright $bottomright $bottomleft;
+	-moz-border-radius:$topleft $topright $bottomright $bottomleft;
+	-webkit-border-radius:$topleft $topright $bottomright $bottomleft;
+	behavior:url(../js/PIE.htc);
+	position:relative;
+}
+
+@mixin minheight($height){
+	min-height:$height;height:auto !important; height:$height;
+}
+
+@mixin button1($top:#FBC421,$bottom:#FEA50B,$radius:10px){
+	background: -webkit-linear-gradient(top, $top, $bottom); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, $top, $bottom); 
+	/* IE 10 */ background: -ms-linear-gradient(top, $top, $bottom);
+	-pie-background:linear-gradient($top 50%, transparent 50%, $bottom) 0 0 / 50px $bottom;
+	border-radius:$radius;
+	behavior:url(../js/PIE.htc);
+}
+
+@mixin background($img, $posx:left, $posy:top, $color:transparent ,$repeat:no-repeat ,$scroll:scroll){
+    @if $img == none {
+        background: $repeat $scroll $posx $posy $color;
+    } @else {
+	    background:url("../images/#{$img}") $repeat $scroll $posx $posy $color;
+    }
+
+}
+
+@mixin boxshadow($x,$y,$blur,$spread,$color,$inset){
+	box-shadow:$x $y $blur $spread $color #{$inset};
+	behavior:url(../js/PIE.htc);
+}
+
+@mixin mulshadow($shadow1,$shadow2){
+	box-shadow:#{$shadow1},#{$shadow2};
+	behavior:url(../js/PIE.htc);
+}
+
+@mixin textshadow($x,$y,$spread,$color){
+	text-shadow:$x $y $spread $color;
+	behavior:url(../js/PIE.htc);
+}
+
+@mixin force-wrap {
+  white-space: pre;
+  // CSS 2.0
+  white-space: pre-wrap;
+  // CSS 2.1
+  white-space: pre-line;
+  // CSS 3.0
+  white-space: -pre-wrap;
+  // Opera 4-6
+  white-space: -o-pre-wrap;
+  // Opera 7
+  white-space: -moz-pre-wrap;
+  // Mozilla
+  white-space: -hp-pre-wrap;
+  // HP Printers
+  word-wrap: break-word;
+  // IE 5+ 
+}
+
+@mixin texttruncation($width){
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:$width;
+}
+
+@mixin verticalcentering1{
+	display:table;
+	#position:relative;
+	overflow:hidden;
+}
+
+@mixin verticalcentering2{
+	#position:absolute;
+	#top:50%;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+@mixin verticalcentering3{
+	#position:relative;
+	#top:-50%;
+}
+
+@mixin transition($transition){
+	-o-transition: #{$transition}; /* Opera */
+	-moz-transition: #{$transition}; /* Firefox 4 */
+	-webkit-transition: #{$transition}; /* Safari and Chrome */
+  transition: #{$transition};
+}
+@mixin filter($filter){
+	filter: #{$filter};
+	-o-filter: #{$filter}; /* Opera */
+	-ms-filter: #{$filter}; /* IE */
+	-moz-filter: #{$filter}; /* Firefox 4 */
+	-webkit-filter: #{$filter}; /* Safari and Chrome */
+}
+@mixin animation($name,$duration){
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@mixin transform($transform){
+	-ms-transform: #{$transform}; /* IE 9 */
+    -moz-transform: #{$transform}; /* Chrome, Safari, Opera */
+    -webkit-transform: #{$transform}; /* Chrome, Safari, Opera */
+  transform: #{$transform};
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1.6, $baseValue: 10) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue*10/$baseValue + rem;
+  
+}

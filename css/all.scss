@@ -1,0 +1,161 @@
+//sass --watch css:css
+@import "_lib.scss";
+
+
+$red: #a72a2f;
+
+body{
+	background:#333;
+	border-top:5px solid $red;
+	padding:10px 0 0;
+}
+
+canvas{
+	border:0px solid #333;
+	background:#fff;
+	// @include boxshadow(0,0,0px,1px,#000,inset)
+}
+a{
+	cursor: pointer;
+	display: block;
+
+	&.delete-tag{
+		color:$red;
+		display: inline-block;
+	}
+}
+
+input{
+	display: block;
+}
+
+form{
+	width:602px;
+	margin:0 auto;
+	overflow:hidden;
+	position: relative;
+}
+
+h1{
+	font-size:20px;
+	font-weight:normal;
+	color:#fff;
+}
+
+.wrapper{
+	margin:0 auto;
+}
+
+#infile{
+	margin:0 0 20px;
+}
+
+.artboard-container{
+	width:600px;
+	height: 600px;
+}
+
+#artboard{
+	position: absolute;
+	width:602px;
+	height: 600px;
+	border:0px solid #000;
+	background: transparent;
+	
+	input{
+		border:0px solid #333;
+		padding:2px;
+		font-size:15px;
+		background: transparent;
+		color:#fff;
+	}
+	span.input-container{
+		border-bottom:1px solid #fff;
+		display: inline-block;
+	}
+}
+
+.board{
+	border:1px solid red;
+	width: 300px;
+	height: 300px;
+	display: block;
+}
+
+.canvas{
+	display: inline-block;
+	width:600px;
+	vertical-align: top;
+}
+
+.add-new-tag{
+	float: right;
+	background:$red;
+	padding:5px 10px;
+	@include roundcorner(20px,20px,20px,20px);
+	color:#fff;
+	font-size:15px;
+}
+
+.additional-tag{
+	margin:10px 0;
+
+	.input-container{
+		margin-right:10px;
+	}
+}
+
+
+.control{
+	margin-top:-50vh;
+	position: relative;
+	margin-left:20px;
+	margin-right:20px;
+
+	span{
+		background:#999;
+		@include roundcorner(50px,50px,50px,50px);
+		font-size:15px;
+		color:#000;
+		padding:5px 10px 8px;
+		cursor:pointer;
+		position:absolute;
+
+		&.disable{
+			background:#ccc;
+			color:#fff;
+		}
+		&.left{
+			left:0;
+		}
+		&.right{
+			right:0;
+		}
+	}
+}
+
+.pagination{
+	ul{
+		li{
+			width:32px;
+			height:32px;
+			border:1px solid #000;
+			display: inline-block;
+
+			img{
+				width:32px;
+				height:32px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 735px) {
+	form{
+		width:300px;
+	}
+	.canvas{
+		width:300px;
+	}
+}
+

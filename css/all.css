@@ -1,0 +1,213 @@
+/*
+@font-face {
+    font-family: *font-family;
+    src: url(../fonts/**);
+}*/
+body {
+  font-family: helvetica, Arial;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0;
+  color: #333;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 150%;
+  margin: 0 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clr {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 100%;
+  font-family: Arial;
+  font-weight: 700;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  background: #333;
+  border-top: 5px solid #a72a2f;
+  padding: 10px 0 0;
+}
+
+canvas {
+  border: 0px solid #333;
+  background: #fff;
+}
+
+a {
+  cursor: pointer;
+  display: block;
+}
+a.delete-tag {
+  color: #a72a2f;
+  display: inline-block;
+}
+
+input {
+  display: block;
+}
+
+form {
+  width: 602px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+#infile {
+  margin: 0 0 20px;
+}
+
+.artboard-container {
+  width: 600px;
+  height: 600px;
+}
+
+#artboard {
+  position: absolute;
+  width: 602px;
+  height: 600px;
+  border: 0px solid #000;
+  background: transparent;
+}
+#artboard input {
+  border: 0px solid #333;
+  padding: 2px;
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+}
+#artboard span.input-container {
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+
+.board {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+.canvas {
+  display: inline-block;
+  width: 600px;
+  vertical-align: top;
+}
+
+.add-new-tag {
+  float: right;
+  background: #a72a2f;
+  padding: 5px 10px;
+  border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  behavior: url(../js/PIE.htc);
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+}
+
+.additional-tag {
+  margin: 10px 0;
+}
+.additional-tag .input-container {
+  margin-right: 10px;
+}
+
+.control {
+  margin-top: -50vh;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.control span {
+  background: #999;
+  border-radius: 50px 50px 50px 50px;
+  -moz-border-radius: 50px 50px 50px 50px;
+  -webkit-border-radius: 50px 50px 50px 50px;
+  behavior: url(../js/PIE.htc);
+  position: relative;
+  font-size: 15px;
+  color: #000;
+  padding: 5px 10px 8px;
+  cursor: pointer;
+  position: absolute;
+}
+.control span.disable {
+  background: #ccc;
+  color: #fff;
+}
+.control span.left {
+  left: 0;
+}
+.control span.right {
+  right: 0;
+}
+
+.pagination ul li {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+.pagination ul li img {
+  width: 32px;
+  height: 32px;
+}
+
+@media only screen and (max-width: 735px) {
+  form {
+    width: 300px;
+  }
+
+  .canvas {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=all.css.map */
